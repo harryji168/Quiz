@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<h1>Show cluck Page</h1>
+ 
+
+<p>
+    <%= clucks.content %> 
+</p>
+
+<img src='<%= clucks.imageUrl %> ' alt="clucks item image" srcset="">
+<p>
+<a href="/clucks/<%- clucks.id%>/edit" class="btn btn-outline-success btn-block my-1">
+    Edit
+</a>
+
+<form action="/clucks/<%= clucks.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete" class="btn btn-outline-danger btn-block">
+</form>
+
+<br>
+
+
+
+
+<%- include('../partials/footer') %>
+
